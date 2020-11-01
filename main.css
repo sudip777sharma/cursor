@@ -1,0 +1,202 @@
+*{
+    box-sizing: border-box;
+}
+
+#overlay {
+    background: black;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+.container{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(50% - 9px);
+    left: calc(50% - 9px);
+    transform: translate(-50%,-50%);
+    animation: cursorAnim 0.5s infinite alternate;
+}
+
+.cursor::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border: 8px solid #0088ff;
+    border-radius: 50%;
+    opacity: .6;
+    top: -9px;
+    left: -9px;
+    transform: translate(-50%,-50%);
+    animation: cursorAnim2 .18s infinite alternate;
+}
+
+@keyframes cursorAnim {
+    from {
+        transform: scale(.8);
+    }
+    to {
+        transform: scale(1.4);
+    }
+}
+@keyframes cursorAnim2 {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.6);
+    }
+}
+
+.circle{
+    border-radius: 50%;
+}
+
+.bg{
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    border: solid 5px #0088ff;
+
+}
+.big{
+    width: 277px;
+    height: 270px;
+    background: black;
+    border: solid 2px rgba(0, 0, 0, 0);
+    border-bottom: solid 2px #0088ff;
+    border-left: solid 2px #0088ff;
+    border-top: solid 2px #0088ff;
+    border-right: solid 2px #0088ff;
+}
+.outermost{
+    width: 255px;
+    height: 255px;
+    border: solid 10px rgba(0, 0, 0, 0);
+    border-bottom: solid 10px #0088ff;
+    border-left: solid 10px #0088ff;   
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation: spin 30s linear infinite;
+}
+.outer{
+    width: 250px;
+    height: 250px;
+    border: solid 5px #0088ff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation: spin 30s linear infinite;
+}
+.middle{
+    width: 215px;
+    height: 215px;
+    border: solid 12px rgba(0, 0, 0, 0);
+    border-bottom: solid 12px #005aa8;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(45deg);
+    animation: spin2 20s linear infinite reverse;
+}
+.middle2{
+    width: 215px;
+    height: 215px;
+    border: solid 6px rgba(0, 0, 0, 0);
+    border-top: solid 6px #005aa8;
+    border-right: solid 6px #005aa8;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation: spin 20s linear infinite reverse;
+}       
+.middle3{
+    width: 205px;
+    height: 205px;
+    border: solid 30px rgba(0, 0, 0, 0);
+    border-top: solid 30px #0088ff4b;
+    border-right: solid 30px #0088ff4b;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation: spin 20s linear infinite reverse;
+}
+.inner{
+    width: 140px;
+    height: 140px;
+    border: solid 5px #0088ff;
+    border-bottom: solid 5px #000000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(45deg);
+    animation: spin2 20s linear infinite;
+}   
+
+.innermost2{
+    width: 80px;
+    height: 80px;
+    border: solid 13px #0088ff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.innermost{
+    width: 117px;
+    height: 117px;
+    border: solid 13px #0088ff;
+    border-top: solid 13px #000000;
+    border-bottom: solid 13px #000000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation: spin2 20s linear infinite reverse;
+}
+
+@keyframes spin{
+    0% {
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+}
+@keyframes spin2{
+    0% {
+        transform: translate(-50%,-50%) rotate(45deg);
+    }
+    100% {
+        transform: translate(-50%,-50%) rotate(405deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
